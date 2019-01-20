@@ -19,7 +19,6 @@ function sendReport() {
   // Testing
   console.log("whatWasWrong: " + document.getElementById('whatWasWrong').value);
   console.log("howToFix: " + document.getElementById('howToFix').value);
-  console.log("Date: " + Date())
   // get client for api calls to mongodb
   const client = stitch.Stitch.initializeDefaultAppClient('canaryapi-uwhnp');
   // select database
@@ -29,13 +28,13 @@ function sendReport() {
   // login as anon and post data to server
   client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => mongodb.collection("reports")
   .insertOne({
-    imageURL: "test.com/test.jpg",
+    imageBase64: document.getElementById('issue').src,
     emoji: Number(document.querySelector('input[name="emojiRadio"]:checked').value),
     whatHappened: document.getElementById('whatWasWrong').value,
     howToFix: document.getElementById('howToFix').value,
     pageURL: "test.com",
     browserVer: chromeVersion,
-    osVer: window.navigator.userAgent
+    osVer: window.navigator.userAgent,
   })
   );
   thankUserForReport();

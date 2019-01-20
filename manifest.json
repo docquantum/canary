@@ -3,7 +3,7 @@
     "description": "pop up when clicked",
     "version": "0.1",
     "manifest_version": 2,
-    "permissions": ["activeTab"],
+    "permissions": ["activeTab", "tabs"],
     "background": {
         "scripts": [ "background.js" ],
         "persistent": false

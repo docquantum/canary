@@ -1,5 +1,6 @@
-chrome.tabs.captureVisibleTab(function(screenshotUrl) {
-  document.getElementById('issue').src = screenshotUrl;
+// Capture image
+chrome.tabs.captureVisibleTab(function(screenshotBase64) {
+  document.getElementById('issue').src = screenshotBase64;
   var height = window.innerHeight / 2;
   var width = window.innerWidth - 30;
   var image = document.getElementById('issue');
