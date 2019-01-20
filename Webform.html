@@ -1,5 +1,7 @@
 ﻿<html>
 <script src="capture.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
 <style>
   .mdiv{
     display: flex;
@@ -12,21 +14,21 @@
     margin-bottom: 5%;
   }
   #other{
-    width: inherit;
-    height: 80%;
+    width: 270;
+    
+    height: 100%;
     
     box-shadow: -12px 0px 12px 0px grey;
   }
   #image{
     margin-right: 5%;
   }
-  #imagedit{
-    height: 30;
-    margin-top: 5%;
-    margin-bottom: 10;
-    margin-left: 5%;
-    background-color:#292929;
-  }
+  .icon{
+	margin-right: 12px;
+}
+.icon:hover{
+	color: black;
+}
   h1{
   	padding-left: 3%;
     font-size: 20px;
@@ -38,8 +40,7 @@
     font-family: "arial";
   }
   #emojiDiv{
-  	background-color: black;
-    color: white;
+    color: lightgray;
     height: 30;
     margin-left: 3%;
     width: 300;
@@ -48,30 +49,36 @@
   	margin-left: 3%;
     margin-top: 1%;
     margin-bottom: 3%;
-   
   }
   button{
-  	background-color: white;
-    
+  	background-color: white; 
   }
 </style>
 <body>
   <div class="mdiv">
     <div id="image">
-      <div id="imagedit">ok </div>
         <img id="issue" src="">
     </div>
       <div id="other">
-        <form action="https://www.google.com" method="POST">
+        <!-- <form action="https://www.google.com" method="POST" enctype="text/plain"></form> -->
           <h1>Report an Issue</h1>
+
           <h4>How much did this bother you?</h4>
-          <div id="emojiDiv"> put emjoi here</div>
+          <div id="emojiDiv">
+            <i class="far icon fa-meh fa-2x"></i>
+            <i class="far icon fa-frown-open fa-2x"></i>
+            <i class="far icon fa-frown fa-2x"></i>
+            <i class="far icon fa-angry fa-2x"></i>
+          </div>
+
           <h4>What do you believe was wrong?</h4>
-          <textarea> </textarea>u
+          <textarea name="whatWasWrong"> </textarea>
+          
           <h4>How would you like this to be fixed?</h4>
-          <textarea> </textarea>
-          <button>Submit report</button>
-        </form>
+          <textarea name="howLikeToFix"> </textarea>
+          <button id="submitButton">Submit report</button>
+        <!-- </form> -->
+        <script src="interact.js"></script>
       </div>
   </div>
   </body>
