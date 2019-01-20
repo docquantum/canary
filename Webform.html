@@ -1,4 +1,5 @@
 <html>
+<script src="stitch4.1.1.js"></script>
 <script src="capture.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -89,25 +90,28 @@ textarea{
   resize: none;
   height: 80px;
 }
-
-  button{
-  	background-color: black;
-    color: white;
-    align-text: center;
-    font-size: 20px;
-    margin: auto;
-    width: 250px;
-    border: none;
-    bottom: 0px;
-    position: absolute;
-    left: 0px;
-    height: 55px;
-    outline: none;
-  }
-  button:active{
+button{
+	background-color: black;
+  color: white;
+  align-text: center;
+  font-size: 20px;
+  margin: auto;
+  width: 250px;
+  border: none;
+  bottom: 0px;
+  position: absolute;
+  left: 0px;
+  height: 55px;
+  outline: none;
+}
+button:active{
   background-color: white;
   color: black;
   transition: all 0.1s;
+}
+button:disabled{
+  background-color: green;
+  color: white;
 }
 #errorText{
   text-align: center;
@@ -115,7 +119,6 @@ textarea{
   font-size: 14px;
   font-family: "Roboto Mono",-apple-system,system-ui,"Helvetica Neue",Arial,sans-serif;
 }
-
 </style>
 <body>
   <div class="mdiv">
@@ -150,11 +153,11 @@ textarea{
       </div>
 
       <h4>What do you believe was wrong?</h4>
-      <textarea name="whatWasWrong"></textarea>
+      <textarea name="whatWasWrong" id="whatWasWrong"></textarea>
 
       <h4>How would you like this to be fixed?</h4>
 
-      <textarea name="howToFix"></textarea>
+      <textarea name="howToFix" id="howToFix"></textarea>
       <p id="errorText"></p>
       <button id="submitButton">Submit report</button>
       <!-- <script>
