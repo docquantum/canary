@@ -47,3 +47,9 @@ function thankUserForReport(){
   document.getElementById("submitButton").innerHTML = "Thank you!";
   document.getElementById('errorText').innerHTML = "";
 }
+
+function openEditor(){
+  chrome.windows.create();
+}
+
+document.getElementById("editButton").addEventListener("click", openEditor);
