@@ -5,6 +5,6 @@ chrome.tabs.captureVisibleTab(function(screenshotUrl) {
   var image = document.getElementById('issue');
   console.log(image.width);
   console.log("aisidnf");
-  image.setAttribute("width",  400);
+  image.setAttribute("width",  500);
   image.setAttribute("height", 400);
 });
