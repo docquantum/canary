@@ -3,6 +3,10 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
 <style>
+  body{
+    width: 800;
+    height: 500;
+  }
   .mdiv{
     display: flex;
     width: 100%;
@@ -14,12 +18,14 @@
     margin-bottom: 5%;
   }
   #other{
-    width: 270;
+    width: 250;
     height: 100%;
     box-shadow: -12px 0px 12px 0px grey;
   }
   #image{
     margin-right: 5%;
+    width: 550;
+    height: 400;
   }
   label{
       margin-right: 12px;
@@ -27,6 +33,10 @@
   input[type="radio"] {
     opacity: 0;
     transform: scale(4);
+  }
+  input[type="radio"]:hover + #iconVisual{
+    color: gray;
+    transition: all 0.5s;
   }
 
 input[type="radio"]:checked + #iconVisual{
@@ -56,11 +66,13 @@ input[type="radio"]:checked + #iconVisual{
   }
   textarea{
   	margin-left: 3%;
-    margin-top: 1%;
-    margin-bottom: 3%;
+    margin-bottom: 20px;
+    width: 220px;
+    height: 80px;
   }
   button{
   	background-color: white; 
+    margin-left: 3%;
   }
 </style>
 <body>
@@ -75,7 +87,7 @@ input[type="radio"]:checked + #iconVisual{
           <h4>How much did this bother you?</h4>
           <div id="emojiDiv">
             <label for="1">
-                    <input type="radio" name="emojiRadio" class="2"  id="icon" value="1" />
+                    <input type="radio" name="emojiRadio" class="1"  id="icon" value="1" />
                     <i id="iconVisual" class="far fa-meh fa-2x"></i>
             </label>
             <label for="2">
@@ -94,7 +106,6 @@ input[type="radio"]:checked + #iconVisual{
                     <input type="radio" name="emojiRadio" class="5" id="icon" value="5" />
                     <i id="iconVisual" class="far fa-angry fa-2x"></i>
             </label>
-            
           </div>
 
           <h4>What do you believe was wrong?</h4>
