@@ -1,15 +1,15 @@
 {
     "name": "Design Good",
     "description": "pop up when clicked",
-    "version": "0.0",
+    "version": "0.1",
     "manifest_version": 2,
-    "permissions": ["storage"],
+    "permissions": ["activeTab"],
     "background": {
         "scripts": [ "background.js" ],
         "persistent": false
     },
     "browser_action": {
-        "default_popup": "helloWorldExtension.html",
+        "default_popup": "Webform.html",
         "default_icon": "Goodies.png"
     },
     "commands": {
