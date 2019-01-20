@@ -91,7 +91,30 @@ textarea{
   resize: none;
   height: 80px;
 }
-button{
+#editDiv{
+  padding: 3%;
+  margin-left: auto;
+  margin-right: 50%;
+}
+#editButton{
+	background-color: black;
+  color: white;
+  align-text: center;
+  font-size: 20px;
+  margin: auto;
+  width: 250px;
+  border: 0;
+  position: relative;
+  left: 0px;
+  height: 55px;
+  outline: 5px;
+}
+#editButton:active{
+  background-color: white;
+  color: black;
+  transition: all 0.1s;
+}
+#submitButton{
 	background-color: black;
   color: white;
   align-text: center;
@@ -105,12 +128,12 @@ button{
   height: 55px;
   outline: none;
 }
-button:active{
+#submitButton:active{
   background-color: white;
   color: black;
   transition: all 0.1s;
 }
-button:disabled{
+#submitButton:disabled{
   background-color: #33C392;
   color: white;
 }
@@ -123,6 +146,9 @@ button:disabled{
 </style>
 <body>
   <div class="mdiv">
+    <div id="editDiv">
+      <button id="editButton">Edit Image</button>
+    </div>
     <div id="image">
       <img id="issue" src="">
     </div>
@@ -143,7 +169,7 @@ button:disabled{
           <input type="radio" name="emojiRadio" id="icon" class="3" value="3" />
           <i id="iconVisual" class="far fa-frown-open fa-2x"></i>
         </label>
-        <label for="4">
+        <label fimageor="4">
           <input type="radio" name="emojiRadio" id="icon" class="4" value="4" />
           <i id="iconVisual" class="far fa-frown fa-2x"></i>
         </label>
