@@ -1,5 +1,5 @@
-﻿chrome.runtime.onInstalled.addListener(function() {
-    chrome.storage.sync.set({color: '#3aa757'}, function() {
-      console.log("The color is green.");
-    });
-  });
+//We need to add the URL, browser version, and OS version; these should be doable using
+//chrome.browserAction.onClicked.addListener(function(){
+//stuff (getPlatformInfo?)
+//});
+//Update background.js
