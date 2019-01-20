@@ -3,3 +3,4 @@
 //stuff (getPlatformInfo?)
 //});
 //Update background.js
+// Connect to db

@@ -1,4 +1,5 @@
 ﻿<html>
+<script src="stitch4.1.1.js"></script>
 <script src="capture.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
@@ -71,7 +72,7 @@ input[type="radio"]:checked + #iconVisual{
     height: 80px;
   }
   button{
-  	background-color: white; 
+  	background-color: white;
     margin-left: 3%;
   }
 </style>
@@ -81,48 +82,38 @@ input[type="radio"]:checked + #iconVisual{
         <img id="issue" src="">
     </div>
       <div id="other">
-        <!-- <form action="https://www.google.com" method="POST" enctype="text/plain"></form> -->
-          <h1>Report an Issue</h1>
+        <h1>Report an Issue</h1>
 
-          <h4>How much did this bother you?</h4>
-          <div id="emojiDiv">
-            <label for="1">
-                    <input type="radio" name="emojiRadio" class="1"  id="icon" value="1" />
-                    <i id="iconVisual" class="far fa-meh fa-2x"></i>
-            </label>
-            <label for="2">
-                    <input type="radio" name="emojiRadio" class="2" id="icon" value="2" />
-                    <i id="iconVisual" class="far fa-angry fa-2x"></i>
-            </label>
-            <label for="3">
-                    <input type="radio" name="emojiRadio" class="3" id="icon" value="3" />
-                    <i id="iconVisual" class="far fa-frown-open fa-2x"></i>
-            </label>
-            <label for="4">
-                    <input type="radio" name="emojiRadio" class="4" id="icon" value="4" />
-                    <i id="iconVisual" class="far fa-frown fa-2x"></i>
-            </label>
-            <label for="5">
-                    <input type="radio" name="emojiRadio" class="5" id="icon" value="5" />
-                    <i id="iconVisual" class="far fa-angry fa-2x"></i>
-            </label>
-          </div>
+        <h4>How much did this bother you?</h4>
+        <div id="emojiDiv">
+          <label for="1">
+                  <input type="radio" name="emojiRadio" class="1" value="1" />
+                  <i id="iconVisual" class="far fa-meh fa-2x"></i>
+          </label>
+          <label for="2">
+                  <input type="radio" name="emojiRadio" class="2" value="2" />
+                  <i id="iconVisual" class="far fa-angry fa-2x"></i>
+          </label>
+          <label for="3">
+                  <input type="radio" name="emojiRadio" class="3" value="3" />
+                  <i id="iconVisual" class="far fa-frown-open fa-2x"></i>
+          </label>
+          <label for="4">
+                  <input type="radio" name="emojiRadio" class="4" value="4" />
+                  <i id="iconVisual" class="far fa-frown fa-2x"></i>
+          </label>
+          <label for="5">
+                  <input type="radio" name="emojiRadio" class="5" value="5" />
+                  <i id="iconVisual" class="far fa-angry fa-2x"></i>
+          </label>
+        </div>
 
-          <h4>What do you believe was wrong?</h4>
-          <textarea name="whatWasWrong"> </textarea>
-          
-          <h4>How would you like this to be fixed?</h4>
-          <textarea name="howLikeToFix"> </textarea>
-          <button id="submitButton">Submit report</button>
-          <!-- <script>
-            // var globalID = 1;
-            // function iconClick(id){
-            //     console.log("oh im clck " + id + " als " + globalID);
-            //     globalID = id;
-            //     document.getElementById("icon").removeAttribute("active", false);
-            // }
-            </script> -->
-        <!-- </form> -->
+        <h4>What do you believe was wrong?</h4>
+        <textarea id="whatWasWrong"></textarea>
+
+        <h4>How would you like this to be fixed?</h4>
+        <textarea id="howToFix"></textarea>
+        <button id="submitButton">Submit report</button>
         <script src="interact.js"></script>
       </div>
   </div>
